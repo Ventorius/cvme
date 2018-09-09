@@ -1,0 +1,10 @@
+.photo-rounded {
+  width: 150px;
+  height: 150px;
+  background-image: url('../../../assets/131682.jpg');
+  background-size: cover;
+  display: flex;
+  align-self: center;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.7);
+}
