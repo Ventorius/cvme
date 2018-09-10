@@ -4,9 +4,10 @@ import './styles.scss';
 
 const Contact = () => (
   <div className="contact">
-    <Item name="Telefon" value="791 190 024" />
+    <Item name="Phone" value="791 190 024" />
     <Item name="Email" value="s.basznianin@outlook.com" />
-    <Item name="Strona" value="www.something.pl" />
+    <Item name="Website" value="www.something.pl" />
+    <Item name="Location" value="Warsaw, Poland" />
   </div>
 );
 
