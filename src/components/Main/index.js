@@ -1,21 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Name from './Name';
-// import Summary from './Summary';
-// import WorkHistory from './WorkHistory';
-// import Education from './Education';
-import Section from './Section';
-import Button from '../Button';
+import Summary from './Summary';
+import WorkHistory from './WorkHistory';
+import Education from './Education';
+import DottedButton from '../DottedButton';
 
 import './styles.scss';
 
 const Main = ({ openNewSectionModal }) => (
   <div className="main">
     <Name />
-    <Section header="Summary" />
-    <Section header="Work history" />
-    <Section header="Education" />
-    <Button text="+ Add new section" onClick={openNewSectionModal} />
+    <Summary />
+    <WorkHistory />
+    <Education />
+    <DottedButton text="+ Add new section" onClick={openNewSectionModal} />
   </div>
 );
 

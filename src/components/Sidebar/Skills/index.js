@@ -1,30 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Skill from './Skill';
-import Button from '../../Button';
+import DottedButton from '../../DottedButton';
 import './styles.scss';
 
-const Skills = ({ openEditSkillsModal }) => (
+const Skills = ({ openEditSkillsModal, skills }) => (
   <div className="skills">
-    <Skill>HTML</Skill>
-    <Skill>CSS</Skill>
-    <Skill>SCSS</Skill>
-    <Skill>crazy</Skill>
-    <Skill>javascript</Skill>
-    <Skill>React JS</Skill>
+    {skills.map(skill => <Skill>{skill}</Skill>)}
     <div className="skills--edit">
-      <Button text="Edit skills" onClick={openEditSkillsModal} />
+      <DottedButton text="Edit skills" onClick={openEditSkillsModal} />
     </div>
-
   </div>
 );
 
 Skills.propTypes = {
   openEditSkillsModal: PropTypes.func,
+  skills: PropTypes.arrayOf(PropTypes.string),
 };
 
 Skills.defaultProps = {
   openEditSkillsModal: () => {},
+  skills: [],
 };
 
 export default Skills;

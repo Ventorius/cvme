@@ -1,0 +1,16 @@
+.dotted-button {
+  border: .2rem #8b8b8b dashed;
+  padding: 1rem;
+  text-align: center;
+  color: #8b8b8b;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+
+  &:hover {
+    border: .2rem #3e94e4 dashed;
+    color: #3e94e4;
+  }
+
+
+}

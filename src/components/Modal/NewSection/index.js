@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
-import Input from '../../Input';
-import Label from '../../Label';
+import DottedButton from '../../DottedButton';
+import './styles.scss';
 
 const NewSection = () => (
   <Fragment>
@@ -8,22 +8,11 @@ const NewSection = () => (
       <div className="title">Add new section</div>
     </header>
     <div className="content">
-
-      <Label value="Title" />
-      <Input />
-
-      <Label value="Phone" />
-      <Input />
-
-      <Label value="Email" />
-      <Input />
-
-      <Label value="Website" />
-      <Input />
-
-      <Label value="Location" />
-      <Input />
-
+      <div className="new--section">
+        <DottedButton text="Summary" />
+        <DottedButton text="Work history" />
+        <DottedButton text="Education" />
+      </div>
     </div>
   </Fragment>
 );
