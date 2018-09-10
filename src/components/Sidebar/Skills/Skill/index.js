@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './styles.scss';
 
-const Skill = ({ children }) => (
-  <div className="skill">{children}</div>
+const Skill = ({ children, ...props }) => (
+  <div className="skill" {...props}>{children}</div>
 );
 
 Skill.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.string),
+  children: PropTypes.string,
 };
 
 Skill.defaultProps = {

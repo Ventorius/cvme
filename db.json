@@ -4,7 +4,22 @@
       "id": 1,
       "firstName": "Sebastian",
       "lastName": "Basznianin",
-      "jobTitle": "Frontend Developer"
+      "jobTitle": "Frontend Developer",
+      "contact": {
+        "phone": "791 190 024",
+        "email": "s.basznianin@outlook.com",
+        "website": "www.something.pl",
+        "location": "Warsaw, Poland"
+      },
+      "skills": [
+        "React",
+        "Javascript",
+        "HTML",
+        "CSS",
+        "SCSS",
+        "Vue",
+        "Design"
+      ]
     }
   ]
 }

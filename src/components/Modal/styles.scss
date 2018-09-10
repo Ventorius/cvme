@@ -15,25 +15,29 @@
     border: 0.063em solid #eaedf2;
     border-radius: 0.25em;
     box-shadow: 0 0.125em 0.25em 0 rgba(0, 0, 0, 0.15);
-    max-width: 24.688em;
+    max-width: 40rem;
     width: 100%;
-  }
 
-  .close{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 0;
-    right: 0;
-    height: 2em;
-    width: 2em;
-    cursor: pointer;
+    .close{
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 0;
+      right: 0;
+      height: 2em;
+      width: 2em;
+      cursor: pointer;
 
-    img {
-      height: 1em;
-      width: 1em;
+      img {
+        height: 1em;
+        width: 1em;
+      }
     }
 
+    .content {
+      padding: 2rem;
+      background-color: #fff;
+    }
   }
 }

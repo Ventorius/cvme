@@ -1,20 +1,26 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Title from './Title';
 import Contact from './Contact';
 import Editable from '../../Editable';
 
 import './styles.scss';
 
-const Info = () => (
+const Info = ({ openEditContactDataModal }) => (
   <div className="info">
-
-    <Editable>
+    <Editable onClick={openEditContactDataModal}>
       <Title />
-    </Editable>
-    <Editable>
       <Contact />
     </Editable>
   </div>
 );
+
+Info.propTypes = {
+  openEditContactDataModal: PropTypes.func,
+};
+
+Info.defaultProps = {
+  openEditContactDataModal: () => {},
+};
 
 export default Info;

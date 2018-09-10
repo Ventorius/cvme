@@ -12,7 +12,7 @@ class Editable extends Component {
   onHoverEnd = () => this.setState(() => ({ hovered: false }))
 
   render() {
-    const { children } = this.props;
+    const { children, onClick } = this.props;
     const { hovered } = this.state;
 
     return (
@@ -20,6 +20,10 @@ class Editable extends Component {
         className={`editable ${hovered ? 'hovered' : ''}`}
         onMouseEnter={this.onHover}
         onMouseLeave={this.onHoverEnd}
+        onClick={onClick}
+        onKeyPress={onClick}
+        role="button"
+        tabIndex={0}
       >
         {children}
       </div>
@@ -28,11 +32,13 @@ class Editable extends Component {
 }
 
 Editable.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.string),
+  children: PropTypes.arrayOf(PropTypes.object),
+  onClick: PropTypes.func,
 };
 
 Editable.defaultProps = {
   children: [],
+  onClick: () => {},
 };
 
 export default Editable;

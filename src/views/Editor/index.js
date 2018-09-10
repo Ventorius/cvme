@@ -7,6 +7,7 @@ import Sidebar from '../../components/Sidebar';
 import {
   openEditContactDataModal,
   openEditSkillsModal,
+  openNewSectionModal,
 } from '../../state/Modal/actions';
 
 import './styles.scss';
@@ -14,24 +15,27 @@ import './styles.scss';
 const Editor = ({
   openEditContactDataModal,
   openEditSkillsModal,
+  openNewSectionModal,
 }) => (
   <div className="editor">
     <Sidebar
       openEditContactDataModal={openEditContactDataModal}
       openEditSkillsModal={openEditSkillsModal}
     />
-    <Main />
+    <Main openNewSectionModal={openNewSectionModal} />
   </div>
 );
 
 Editor.propTypes = {
   openEditContactDataModal: PropTypes.func,
   openEditSkillsModal: PropTypes.func,
+  openNewSectionModal: PropTypes.func,
 };
 
 Editor.defaultProps = {
   openEditContactDataModal: () => {},
   openEditSkillsModal: () => {},
+  openNewSectionModal: () => {},
 };
 
 function mapStateToProps(state) {
@@ -41,4 +45,5 @@ function mapStateToProps(state) {
 export default connect(mapStateToProps, {
   openEditContactDataModal,
   openEditSkillsModal,
+  openNewSectionModal,
 })(Editor);

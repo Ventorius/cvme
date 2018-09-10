@@ -18,14 +18,20 @@ const userReducer = (state = initialState, action) => {
     case FETCH_USER_START:
       return {
         ...state,
-        profile: {},
+        isLoading: true,
       };
 
     case FETCH_USER_SUCCESS:
-      return state;
+      return {
+        isLoading: false,
+        profile: action.payload,
+      };
 
     case FETCH_USER_FAILURE:
-      return state;
+      return {
+        isLoading: false,
+        profile: {},
+      };
 
     case UPDATE_USER_START:
       return state;
