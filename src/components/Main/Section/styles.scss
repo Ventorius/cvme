@@ -1,10 +1,16 @@
 .section {
-  h2 {
+
+  padding-right: 1rem;
+  margin-bottom: 2rem;
+
+  h3 {
     font-family: 'Montserrat', 'sans-serif';
+    text-transform: uppercase;
   }
 
-  p {
-    font-family: 'Open-Sans', 'sans-serif';
+  span {
+    font-family: 'Roboto', 'sans-serif';
+    color: rgba(0,0,0, 0.7);
   }
 
 }
